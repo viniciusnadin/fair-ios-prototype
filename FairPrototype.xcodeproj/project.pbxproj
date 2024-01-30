@@ -11,6 +11,7 @@
 		D546912A2B6978C00054F80E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54691292B6978C00054F80E /* ContentView.swift */; };
 		D546912C2B6978C10054F80E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D546912B2B6978C10054F80E /* Assets.xcassets */; };
 		D546912F2B6978C10054F80E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D546912E2B6978C10054F80E /* Preview Assets.xcassets */; };
+		D546913C2B698B880054F80E /* backgroundVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D546913B2B698B880054F80E /* backgroundVideo.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		D54691292B6978C00054F80E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D546912B2B6978C10054F80E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D546912E2B6978C10054F80E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D546913B2B698B880054F80E /* backgroundVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = backgroundVideo.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				D54691272B6978C00054F80E /* FairPrototypeApp.swift */,
 				D54691292B6978C00054F80E /* ContentView.swift */,
+				D546913B2B698B880054F80E /* backgroundVideo.mp4 */,
 				D546912B2B6978C10054F80E /* Assets.xcassets */,
 				D546912D2B6978C10054F80E /* Preview Content */,
 			);
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D546912F2B6978C10054F80E /* Preview Assets.xcassets in Resources */,
+				D546913C2B698B880054F80E /* backgroundVideo.mp4 in Resources */,
 				D546912C2B6978C10054F80E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
