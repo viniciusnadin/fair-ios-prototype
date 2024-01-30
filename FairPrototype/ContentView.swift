@@ -58,29 +58,27 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                Spacer()
-                Text("fair")
-                    .font(.system(size: 100))
-                    .foregroundStyle(.white)
-                    .bold()
-                    .fontWeight(.medium)
-                Spacer().frame(maxHeight: 40)
-                Button(action: {
-                    print("Botão pressionado")
-                }) {
-                    Text("Get Started")
-                        .frame(maxWidth: .infinity)
-                        .padding(13)
-                        .background(Color.white)
-                        .foregroundColor(.black)
-                        .cornerRadius(4)
-                        .fontWeight(.light)
+                GeometryReader { geometry in
+                    VStack {
+                        Spacer().frame(height: geometry.size.height / 4)
+                        Text("fair")
+                            .font(.system(size: 100))
+                            .foregroundStyle(.white)
+                            .bold()
+                            .fontWeight(.medium)
+                        
+                        Text("Some are born great, some achieve greatness, and some have greatness thrust upon them.")
+                            .font(.system(size: 20))
+                            .foregroundStyle(.white)
+                            .multilineTextAlignment(.center)
+                            .fontWeight(.light)
+                    }
                 }
-                
+                Spacer()
                 Button(action: {
                     print("Botão pressionado")
                 }) {
-                    Text("go ahead")
+                    Text("Sign")
                         .frame(maxWidth: .infinity)
                         .padding(13)
                         .background(Color.white.opacity(0.3))
@@ -88,16 +86,20 @@ struct ContentView: View {
                         .cornerRadius(4)
                         .fontWeight(.light)
                 }
-                Spacer().frame(maxHeight: 20)
-                Text("Some are born great, some achieve greatness, and some have greatness thrust upon them.")
-                    .font(.system(size: 20))
-                    .foregroundStyle(.white)
-                    .multilineTextAlignment(.center)
-                    .fontWeight(.light)
-                    .padding(20)
-                Spacer()
+                Button(action: {
+                    print("Botão pressionado")
+                }) {
+                    Text("Quick tour")
+                        .frame(maxWidth: .infinity)
+                        .padding(13)
+                        .background(Color.white)
+                        .foregroundColor(.black)
+                        .cornerRadius(4)
+                        .fontWeight(.light)
+                }
             }.padding(40)
-                .background(Color.black.opacity(0.2))
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.black.opacity(0.25))
         }
     }
 }
