@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct Sign: View {
+    
+    @State private var text: String = ""
+    @State private var isEditing: Bool = false
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -18,14 +22,36 @@ struct Sign: View {
                     .font(.custom("Roboto-Light", size: 20))
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 100)
+                    .padding(.horizontal, 50)
                 
-                Spacer().frame(maxHeight: 40)
+                Spacer().frame(maxHeight: 50)
+                VStack {
+                    ZStack(alignment: .leading) {
+                        Text("Email address")
+                            .foregroundStyle(.secondary)
+                            .offset(x: isEditing || !text.isEmpty ? -12 : 0, y: isEditing || !text.isEmpty ? -25 : 0)
+                            .scaleEffect(isEditing || !text.isEmpty ? 0.8 : 1)
+                            .animation(.spring(response: 0.4, dampingFraction: 0.9), value: isEditing || !text.isEmpty)
+                        TextField("", text: $text, onEditingChanged: { isEditing in
+                            self.isEditing = isEditing
+                        })
+                        .foregroundStyle(.black)
+                        .padding(.top, isEditing || !text.isEmpty ? 20 : 0)
+                        .autocorrectionDisabled()
+                        .keyboardType(.emailAddress)
+                        .textInputAutocapitalization(.never)
+                        
+                    }
+                    Rectangle()
+                        .frame(height: 1)
+                        .foregroundColor(.gray)
+                }
+                .padding(.bottom, 10)
                 
                 Button(action: {
                     print("Botão pressionado")
                 }) {
-                    Text("Email")
+                    Text("Continue")
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 13)
                         .padding(.horizontal, 20)
@@ -34,7 +60,18 @@ struct Sign: View {
                         .cornerRadius(4)
                         .fontWeight(.regular)
                 }
-                .padding(.horizontal, 30)
+                
+                HStack {
+                    VStack {
+                        Divider()
+                    }
+                    Text("or")
+                        .foregroundStyle(.secondary)
+                        .font(.custom("Roboto-Light", size: 15))
+                    VStack {
+                        Divider()
+                    }
+                }.padding(.vertical, 10)
                 
                 Button(action: {
                     print("Botão pressionado")
@@ -50,7 +87,6 @@ struct Sign: View {
                     RoundedRectangle(cornerRadius: 4)
                         .stroke(Color.black, lineWidth: 1)
                 )
-                .padding(.horizontal, 30)
                 
                 Button(action: {
                     print("Botão pressionado")
@@ -66,7 +102,6 @@ struct Sign: View {
                     RoundedRectangle(cornerRadius: 4)
                         .stroke(Color.black, lineWidth: 1)
                 )
-                .padding(.horizontal, 30)
                 
                 Button(action: {
                     print("Botão pressionado")
@@ -82,14 +117,17 @@ struct Sign: View {
                     RoundedRectangle(cornerRadius: 4)
                         .stroke(Color.black, lineWidth: 1)
                 )
-                .padding(.horizontal, 30)
                 
                 Text("By continuing you agree to our Terms & Conditions and Privacy Policy and to subscribe to emails for offers, alerts and services.")
-                    .padding(.horizontal, 30)
+                    .padding(.horizontal, 45)
                     .padding(.vertical, 10)
-                    .font(.custom("Roboto-Light", size: 13))
+                    .font(.custom("Roboto-Light", size: 12))
                     .multilineTextAlignment(.center)
             }
+            .onTapGesture {
+                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            }
+            .padding(.horizontal, 30)
         }
     }
 }

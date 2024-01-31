@@ -37,7 +37,7 @@ class VideoPlayerUIView: UIView {
         playerLayer.player = queuePlayer
         playerLayer.videoGravity = .resizeAspectFill
         layer.addSublayer(playerLayer)
-        
+        playerLayer.player?.isMuted = true
         queuePlayer.play()
     }
     
@@ -63,13 +63,11 @@ struct ContentView: View {
                         VStack {
                             Spacer().frame(height: geometry.size.height / 4)
                             Text("Fair")
-                                .font(.custom("Roboto-Light", size: 100))
+                                .font(.custom("Roboto-Bold", size: 100))
                                 .foregroundStyle(.white)
-                                .bold()
-                                .fontWeight(.medium)
                             
                             Text("Some are born great, some achieve greatness, and some have greatness thrust upon them.")
-                                .font(.custom("Roboto-Light", size: 20))
+                                .font(.custom("Roboto-Light", size: 22))
                                 .foregroundStyle(.white)
                                 .multilineTextAlignment(.center)
                                 .fontWeight(.light)
@@ -97,7 +95,7 @@ struct ContentView: View {
                             .background(Color.white.opacity(0.3))
                             .foregroundColor(.white)
                             .cornerRadius(4)
-                            .font(.custom("Roboto-Light", size: 15))
+                            .font(.custom("Roboto-Light", size: 18))
                     }
                     
                     NavigationLink(destination: Sign()) {
@@ -107,7 +105,7 @@ struct ContentView: View {
                             .background(Color.white)
                             .foregroundColor(.black)
                             .cornerRadius(4)
-                            .font(.custom("Roboto-Light", size: 15))
+                            .font(.custom("Roboto-Light", size: 18))
                     }
                     
                 }.padding(40)
