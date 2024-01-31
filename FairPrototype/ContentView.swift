@@ -53,54 +53,68 @@ class VideoPlayerUIView: UIView {
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            VideoBackgroundView()
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                GeometryReader { geometry in
-                    VStack {
-                        Spacer().frame(height: geometry.size.height / 4)
-                        Text("fair")
-                            .font(.system(size: 100))
-                            .foregroundStyle(.white)
-                            .bold()
-                            .fontWeight(.medium)
-                        
-                        Text("Some are born great, some achieve greatness, and some have greatness thrust upon them.")
-                            .font(.system(size: 20))
-                            .foregroundStyle(.white)
-                            .multilineTextAlignment(.center)
-                            .fontWeight(.light)
+        NavigationView {
+            ZStack {
+                VideoBackgroundView()
+                    .edgesIgnoringSafeArea(.all)
+                
+                VStack {
+                    GeometryReader { geometry in
+                        VStack {
+                            Spacer().frame(height: geometry.size.height / 4)
+                            Text("Fair")
+                                .font(.custom("Roboto-Light", size: 100))
+                                .foregroundStyle(.white)
+                                .bold()
+                                .fontWeight(.medium)
+                            
+                            Text("Some are born great, some achieve greatness, and some have greatness thrust upon them.")
+                                .font(.custom("Roboto-Light", size: 20))
+                                .foregroundStyle(.white)
+                                .multilineTextAlignment(.center)
+                                .fontWeight(.light)
+                        }.frame(maxWidth: .infinity)
                     }
-                }
-                Spacer()
-                Button(action: {
-                    print("Botão pressionado")
-                }) {
-                    Text("Sign")
-                        .frame(maxWidth: .infinity)
-                        .padding(13)
-                        .background(Color.white.opacity(0.3))
-                        .foregroundColor(.white)
-                        .cornerRadius(4)
-                        .fontWeight(.light)
-                }
-                Button(action: {
-                    print("Botão pressionado")
-                }) {
-                    Text("Quick tour")
-                        .frame(maxWidth: .infinity)
-                        .padding(13)
-                        .background(Color.white)
-                        .foregroundColor(.black)
-                        .cornerRadius(4)
-                        .fontWeight(.light)
-                }
-            }.padding(40)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.black.opacity(0.25))
-        }
+                    //                Spacer()
+                    //                Button(action: {
+                    //                    print("Botão pressionado")
+                    //                }) {
+                    //                    Text("Sign")
+                    //                        .frame(maxWidth: .infinity)
+                    //                        .padding(13)
+                    //                        .background(Color.white.opacity(0.3))
+                    //                        .foregroundColor(.white)
+                    //                        .cornerRadius(4)
+                    //                        .fontWeight(.light)
+                    //                }
+                    
+                    Button(action: {
+                        print("Botão pressionado")
+                    }) {
+                        Text("Take a Tour")
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 13)
+                            .background(Color.white.opacity(0.3))
+                            .foregroundColor(.white)
+                            .cornerRadius(4)
+                            .font(.custom("Roboto-Light", size: 15))
+                    }
+                    
+                    NavigationLink(destination: Sign()) {
+                        Text("Get Started")
+                            .frame(maxWidth: .infinity)
+                            .padding(13)
+                            .background(Color.white)
+                            .foregroundColor(.black)
+                            .cornerRadius(4)
+                            .font(.custom("Roboto-Light", size: 15))
+                    }
+                    
+                }.padding(40)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.black.opacity(0.25))
+            }
+        }.accentColor(.black)
     }
 }
 
