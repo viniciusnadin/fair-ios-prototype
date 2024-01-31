@@ -27,6 +27,8 @@
 		D54691742B69DCCD0054F80E /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D54691672B69DCCD0054F80E /* Roboto-Black.ttf */; };
 		D54691752B69DCCD0054F80E /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D54691682B69DCCD0054F80E /* Roboto-BoldItalic.ttf */; };
 		D54691762B69DCCD0054F80E /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = D54691692B69DCCD0054F80E /* LICENSE.txt */; };
+		D54691AD2B6ACCBF0054F80E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54691AC2B6ACCBF0054F80E /* HomeView.swift */; };
+		D54691AF2B6AD1800054F80E /* RoadMapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54691AE2B6AD1800054F80E /* RoadMapsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		D54691672B69DCCD0054F80E /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		D54691682B69DCCD0054F80E /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
 		D54691692B69DCCD0054F80E /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		D54691AC2B6ACCBF0054F80E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D54691AE2B6AD1800054F80E /* RoadMapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadMapsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 				D54691272B6978C00054F80E /* FairPrototypeApp.swift */,
 				D54691292B6978C00054F80E /* ContentView.swift */,
 				D546913D2B69969F0054F80E /* Sign.swift */,
+				D54691AC2B6ACCBF0054F80E /* HomeView.swift */,
+				D54691AE2B6AD1800054F80E /* RoadMapsView.swift */,
 				D546913B2B698B880054F80E /* backgroundVideo.mp4 */,
 				D546912B2B6978C10054F80E /* Assets.xcassets */,
 				D546912D2B6978C10054F80E /* Preview Content */,
@@ -209,6 +215,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D546912A2B6978C00054F80E /* ContentView.swift in Sources */,
+				D54691AF2B6AD1800054F80E /* RoadMapsView.swift in Sources */,
+				D54691AD2B6ACCBF0054F80E /* HomeView.swift in Sources */,
 				D54691282B6978C00054F80E /* FairPrototypeApp.swift in Sources */,
 				D546913E2B69969F0054F80E /* Sign.swift in Sources */,
 			);
