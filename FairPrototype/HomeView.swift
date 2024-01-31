@@ -22,8 +22,8 @@ struct HomeView: View {
             
             // Segunda tela
             NavigationView {
-                Text("Tela 2")
-                    .navigationBarTitle("Tela 2", displayMode: .inline)
+                SearchView()
+                    .navigationBarTitle("Search", displayMode: .large)
             }
             .tabItem {
                 Image(systemName: "magnifyingglass")
@@ -33,8 +33,8 @@ struct HomeView: View {
             
             // Terceira tela
             NavigationView {
-                Text("Tela 3")
-                    .navigationBarTitle("Tela 3", displayMode: .inline)
+                ProfileView()
+                    .navigationBarTitle("Profile", displayMode: .large)
             }
             .tabItem {
                 Image(systemName: "person")
@@ -42,6 +42,7 @@ struct HomeView: View {
             }
             .tag(2)
         }
+        .tint(.black)
     }
 }
 
