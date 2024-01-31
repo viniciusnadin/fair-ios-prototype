@@ -12,7 +12,6 @@ struct HomeView: View {
         TabView {
             NavigationView {
                 RoadMapsView()
-                    .navigationBarTitle("Road Maps", displayMode: .large)
             }
             .tabItem {
                 Image(systemName: "map")
