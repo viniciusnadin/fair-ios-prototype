@@ -19,6 +19,8 @@ struct RoadMapsView: View {
             cardTitle: "Computer Science",
             cardSubTitle: "Learn with Vinicius how to deliver high quality projects"),
     ]
+    
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -33,16 +35,24 @@ struct RoadMapsView: View {
                 .font(.custom("Roboto-Light", size: 20))
                 .foregroundStyle(.black.opacity(0.6))
                 .padding(.bottom, 0)
-            HStack {
-                Text("Today's Road Maps")
-                    .font(.custom("Roboto-Regular", size: 25))
-                    .foregroundStyle(.black)
-                Spacer()
-                Text("See All")
-                    .font(.custom("Roboto-Light", size: 14))
-                    .foregroundStyle(Color.secondary)
-
-            }.padding(.top, 10)
+            
+            CategoryRoadMapView(categoryTitle: "Hotests Road Maps")
+            
+            Spacer().frame(maxHeight: 10)
+            
+            VStack(alignment: .leading) {
+                RoadMapCardScrollView(cardViewModels: viewModels, currentPage: $currentPage)
+                    .frame(height: 200)
+                
+                HStack {
+                    Spacer()
+                    PageControl(numberOfPages: viewModels.count, currentPage: $currentPage)
+                        .padding(.top, 10)
+                    Spacer()
+                }
+            }
+            
+            CategoryRoadMapView(categoryTitle: "Enrolled Road Maps")
             
             Spacer().frame(maxHeight: 10)
             
@@ -65,4 +75,21 @@ struct RoadMapsView: View {
 
 #Preview {
     RoadMapsView()
+}
+
+struct CategoryRoadMapView: View {
+    var categoryTitle: String
+    
+    var body: some View {
+        HStack {
+            Text(categoryTitle)
+                .font(.custom("Roboto-Regular", size: 25))
+                .foregroundStyle(.black)
+            Spacer()
+            Text("See All")
+                .font(.custom("Roboto-Light", size: 14))
+                .foregroundStyle(Color.secondary)
+            
+        }.padding(.top, 10)
+    }
 }
