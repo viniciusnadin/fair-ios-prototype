@@ -8,22 +8,21 @@
 import SwiftUI
 
 struct RoadMapCardView: View {
-    var imageName: String
+    var viewModel: RoadMapCardViewModel
     
     var body: some View {
         ZStack {
-            Image(imageName)
+            Image(viewModel.cardImage)
                 .resizable(resizingMode: .stretch)
                 .cornerRadius(10)
             
             VStack(alignment: .leading, spacing: 5) {
-                
-                Text("Bedtime & Wakeup")
+                Text(viewModel.cardTitle)
                     .font(.custom("Roboto-Bold", size: 25))
                     .foregroundColor(.white)
                     .padding(.top, 10)
                 
-                Text("Schedule the reminder to go to bed early and wake up calmly.")
+                Text(viewModel.cardSubTitle)
                     .font(.custom("Roboto-Light", size: 15))
                     .foregroundColor(.white)
                     .padding(.trailing, 100)
@@ -51,5 +50,5 @@ struct RoadMapCardView: View {
 }
 
 #Preview {
-    RoadMapCardView(imageName: "programming")
+    RoadMapCardView(viewModel: RoadMapCardViewModel(cardImage: "sleep", cardTitle: "Bedtime & Wakeup", cardSubTitle: "Schedule the reminder to go to bed early and wake up calmly."))
 }
