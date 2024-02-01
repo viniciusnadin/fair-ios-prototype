@@ -33,15 +33,22 @@ struct RoadMapsView: View {
                 .font(.custom("Roboto-Light", size: 20))
                 .foregroundStyle(.black.opacity(0.6))
                 .padding(.bottom, 0)
-            Text("Today's Road Maps")
-                .font(.custom("Roboto-Regular", size: 25))
-                .foregroundStyle(.black)
+            HStack {
+                Text("Today's Road Maps")
+                    .font(.custom("Roboto-Regular", size: 25))
+                    .foregroundStyle(.black)
+                Spacer()
+                Text("See All")
+                    .font(.custom("Roboto-Light", size: 14))
+                    .foregroundStyle(Color.secondary)
+
+            }.padding(.top, 10)
             
             Spacer().frame(maxHeight: 10)
             
             VStack(alignment: .leading) {
                 RoadMapCardScrollView(cardViewModels: viewModels, currentPage: $currentPage)
-                    .frame(height: 160)
+                    .frame(height: 200)
                 
                 HStack {
                     Spacer()

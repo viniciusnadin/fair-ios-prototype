@@ -25,7 +25,7 @@ struct RoadMapCardScrollView: View {
             HStack(spacing: cardSpacing) {
                 ForEach(cardViewModels.indices, id: \.self) { index in
                     RoadMapCardView(viewModel: cardViewModels[index])
-                        .frame(width: geometry.size.width, height: 160)
+                        .frame(width: geometry.size.width)
                 }
             }
             .offset(x: offset)

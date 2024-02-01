@@ -23,14 +23,14 @@ struct RoadMapCardView: View {
                     .padding(.top, 10)
                 
                 Text(viewModel.cardSubTitle)
-                    .font(.custom("Roboto-Light", size: 15))
+                    .font(.custom("Roboto-Light", size: 18))
                     .foregroundColor(.white)
                     .padding(.trailing, 100)
-                
+                Spacer()
                 Button(action: {
                     // Ação do botão
                 }) {
-                    Text("Join Now")
+                    Text("Enroll Now")
                         .font(.custom("Roboto-Light", size: 18))
                         .padding(.horizontal, 20)
                         .padding(.vertical, 10)
@@ -40,6 +40,7 @@ struct RoadMapCardView: View {
                         
                 }
                 .padding(.top, 10)
+                .padding(.bottom, 20)
                 
             }.frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(.horizontal, 10)
