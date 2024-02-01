@@ -32,6 +32,8 @@
 		D54691B12B6AD38D0054F80E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54691B02B6AD38C0054F80E /* SearchView.swift */; };
 		D54691B32B6AD3A70054F80E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54691B22B6AD3A70054F80E /* ProfileView.swift */; };
 		D54691B52B6AE0320054F80E /* RoadMapCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54691B42B6AE0320054F80E /* RoadMapCardView.swift */; };
+		D54691B72B6B1C630054F80E /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54691B62B6B1C630054F80E /* PageControl.swift */; };
+		D54691B92B6B1D960054F80E /* RoadMapCardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54691B82B6B1D960054F80E /* RoadMapCardScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		D54691B02B6AD38C0054F80E /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		D54691B22B6AD3A70054F80E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D54691B42B6AE0320054F80E /* RoadMapCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadMapCardView.swift; sourceTree = "<group>"; };
+		D54691B62B6B1C630054F80E /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		D54691B82B6B1D960054F80E /* RoadMapCardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadMapCardScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				D54691B22B6AD3A70054F80E /* ProfileView.swift */,
 				D54691B02B6AD38C0054F80E /* SearchView.swift */,
 				D54691AE2B6AD1800054F80E /* RoadMapsView.swift */,
+				D54691B82B6B1D960054F80E /* RoadMapCardScrollView.swift */,
+				D54691B62B6B1C630054F80E /* PageControl.swift */,
 				D546913B2B698B880054F80E /* backgroundVideo.mp4 */,
 				D546912B2B6978C10054F80E /* Assets.xcassets */,
 				D546912D2B6978C10054F80E /* Preview Content */,
@@ -223,9 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D54691B72B6B1C630054F80E /* PageControl.swift in Sources */,
 				D546912A2B6978C00054F80E /* ContentView.swift in Sources */,
 				D54691B52B6AE0320054F80E /* RoadMapCardView.swift in Sources */,
 				D54691AF2B6AD1800054F80E /* RoadMapsView.swift in Sources */,
+				D54691B92B6B1D960054F80E /* RoadMapCardScrollView.swift in Sources */,
 				D54691AD2B6ACCBF0054F80E /* HomeView.swift in Sources */,
 				D54691B32B6AD3A70054F80E /* ProfileView.swift in Sources */,
 				D54691282B6978C00054F80E /* FairPrototypeApp.swift in Sources */,

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RoadMapsView: View {
+    @State private var currentPage = 0
+    let cardData = ["sleep", "programming", "sleep", "sleep"]
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -28,9 +30,17 @@ struct RoadMapsView: View {
             
             Spacer().frame(maxHeight: 10)
             
-            RoadMapCardView(imageName: "sleep")
-                .frame(maxHeight: 160)
-            
+            VStack(alignment: .leading) {
+                RoadMapCardScrollView(cardData: cardData, currentPage: $currentPage)
+                    .frame(height: 160)
+                
+                HStack {
+                    Spacer()
+                    PageControl(numberOfPages: cardData.count, currentPage: $currentPage)
+                        .padding(.top, 10)
+                    Spacer()
+                }
+            }
             Spacer()
         }
         .padding()
