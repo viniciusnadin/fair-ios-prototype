@@ -97,17 +97,15 @@
 		D54691262B6978C00054F80E /* FairPrototype */ = {
 			isa = PBXGroup;
 			children = (
+				D54691BC2B6B1ED00054F80E /* Components */,
+				D54691BB2B6B1EB60054F80E /* RoadMapCard */,
 				D546915C2B69DCC10054F80E /* Font */,
 				D54691272B6978C00054F80E /* FairPrototypeApp.swift */,
 				D54691292B6978C00054F80E /* ContentView.swift */,
 				D546913D2B69969F0054F80E /* Sign.swift */,
 				D54691AC2B6ACCBF0054F80E /* HomeView.swift */,
-				D54691B42B6AE0320054F80E /* RoadMapCardView.swift */,
 				D54691B22B6AD3A70054F80E /* ProfileView.swift */,
 				D54691B02B6AD38C0054F80E /* SearchView.swift */,
-				D54691AE2B6AD1800054F80E /* RoadMapsView.swift */,
-				D54691B82B6B1D960054F80E /* RoadMapCardScrollView.swift */,
-				D54691B62B6B1C630054F80E /* PageControl.swift */,
 				D546913B2B698B880054F80E /* backgroundVideo.mp4 */,
 				D546912B2B6978C10054F80E /* Assets.xcassets */,
 				D546912D2B6978C10054F80E /* Preview Content */,
@@ -142,6 +140,24 @@
 				D54691612B69DCCC0054F80E /* Roboto-ThinItalic.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		D54691BB2B6B1EB60054F80E /* RoadMapCard */ = {
+			isa = PBXGroup;
+			children = (
+				D54691B42B6AE0320054F80E /* RoadMapCardView.swift */,
+				D54691AE2B6AD1800054F80E /* RoadMapsView.swift */,
+				D54691B82B6B1D960054F80E /* RoadMapCardScrollView.swift */,
+			);
+			path = RoadMapCard;
+			sourceTree = "<group>";
+		};
+		D54691BC2B6B1ED00054F80E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D54691B62B6B1C630054F80E /* PageControl.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
